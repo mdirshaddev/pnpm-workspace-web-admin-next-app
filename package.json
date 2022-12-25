@@ -1,7 +1,7 @@
 {
   "name": "mdirshaddev.github.io",
   "homepage": "https://mdirshaddev.netlify.app",
-  "description": "PNPM Workspace with Nx Remote Caching for ",
+  "description": "PNPM Workspace with Nx Remote Caching for faster build time on CI's",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -16,6 +16,8 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@nrwl/nx-cloud": "^15.0.2",
+    "nx": "^15.4.1",
     "prettier": "^2.8.1"
   }
 }

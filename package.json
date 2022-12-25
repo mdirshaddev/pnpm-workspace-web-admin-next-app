@@ -1,0 +1,21 @@
+{
+  "name": "mdirshaddev.github.io",
+  "homepage": "https://mdirshaddev.netlify.app",
+  "description": "PNPM Workspace with Nx Remote Caching for ",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "format:check": "prettier -c .",
+    "format": "prettier -w ."
+  },
+  "keywords": [],
+  "author": {
+    "name": "Md Irshad",
+    "email": "mdirshaddev+github@gmail.com",
+    "url": "https://mdirshaddev.github.io"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^2.8.1"
+  }
+}

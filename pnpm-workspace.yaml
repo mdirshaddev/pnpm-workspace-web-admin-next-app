@@ -1,0 +1,4 @@
+packages:
+  - 'apps/*' # mainline web application
+  - 'libs/*' # shared code which are not published to npm
+  - 'packages/*' # share code which are published to npm

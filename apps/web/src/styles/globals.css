@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  @apply bg-[#f9fafb] dark:bg-[#161c24];
+}
+
+/* Theme Palette Color */
+.Default {
+  @apply bg-Default;
+}
+
+.Cyan {
+  @apply bg-Cyan;
+}
+
+.Purple {
+  @apply bg-Purple;
+}
+
+.Blue {
+  @apply bg-Blue;
+}
+
+.Orange {
+  @apply bg-Orange;
+}
+
+.Red {
+  @apply bg-Red;
+}
+
+/* Text Color Palette */
+.TextDefault {
+  @apply text-Default;
+}
+
+.TextCyan {
+  @apply text-Cyan;
+}
+
+.TextPurple {
+  @apply text-Purple;
+}
+
+.TextBlue {
+  @apply text-Blue;
+}
+
+.TextOrange {
+  @apply text-Orange;
+}
+
+.TextRed {
+  @apply text-Red;
+}
+
+.magicalDefault {
+  @apply bg-magicDefault;
+  background-clip: text;
+}
+
+.magicalCyan {
+  @apply bg-magicCyan;
+  background-clip: text;
+}
+
+.magicalPurple {
+  @apply bg-magicPurple;
+  background-clip: text;
+}
+
+.magicalBlue {
+  @apply bg-magicBlue;
+  background-clip: text;
+}
+
+.magicalOrange {
+  @apply bg-magicOrange;
+  background-clip: text;
+}
+
+.magicalRed {
+  @apply bg-magicRed;
+  background-clip: text;
+}

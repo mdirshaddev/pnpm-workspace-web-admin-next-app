@@ -6,3 +6,12 @@ node_modules
 
 # pnpm lockfile
 pnpm-lock.yaml
+
+# next
+**/.next
+
+# production build
+**/build
+
+# production dist
+**/dist

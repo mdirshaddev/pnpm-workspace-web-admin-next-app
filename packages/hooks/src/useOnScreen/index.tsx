@@ -1,4 +1,4 @@
-import type { PropsWithChildren, RefObject } from 'react';
+import type { RefObject } from 'react';
 
 import { useState, useEffect, useRef } from 'react';
 

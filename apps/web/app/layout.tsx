@@ -1,14 +1,6 @@
 // Tailwind
 import 'src/styles/globals.css';
 
-// import dynamic from 'next/dynamic';
-
-// const Header = dynamic(() => {
-//   return import('src/components/layouts/header');
-// });
-
-// import Container from 'src/shared/Container';
-
 // Google Font
 import { Inter } from '@next/font/google';
 
@@ -17,8 +9,6 @@ import { ThemeProvider } from 'src/contexts/theme';
 import { ViewProvider } from 'src/contexts/views';
 
 import Header from 'src/components/layouts/header';
-
-// import Footer from 'components/layouts/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -43,7 +33,6 @@ export default async function RootLayout({
           <ThemeProvider>
             <Header />
             {children}
-            {/* <Footer /> */}
           </ThemeProvider>
         </ViewProvider>
       </body>

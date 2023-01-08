@@ -1,15 +1,25 @@
-// Tailwind
+// Global style file - TailwindCSS
 import 'src/styles/globals.css';
 
 // Google Font
 import { Inter } from '@next/font/google';
 
-// Contexts
-import { ThemeProvider } from 'src/contexts/theme';
-import { ViewProvider } from 'src/contexts/views';
+// Layout Context
+import { SidebarProvider } from 'src/layout/contexts/sidebar';
 
-import Header from 'src/components/layouts/header';
+// Shared Context
+import { ViewProvider } from 'src/shared/contexts/views';
+import { ThemeProvider } from 'src/shared/contexts/theme';
 
+// Layout Component
+import {
+  Header,
+  Sidebar,
+  ThemePanel,
+  ThemePanelButton
+} from 'src/layout/components';
+
+// Next Font - Inter
 const inter = Inter({ subsets: ['latin'] });
 
 export default async function RootLayout({
@@ -29,12 +39,17 @@ export default async function RootLayout({
         <link rel='icon' href='/logo.svg' />
       </head>
       <body>
-        <ViewProvider>
-          <ThemeProvider>
-            <Header />
-            {children}
-          </ThemeProvider>
-        </ViewProvider>
+        <SidebarProvider>
+          <ViewProvider>
+            <ThemeProvider>
+              <Header />
+              {children}
+              <Sidebar />
+              <ThemePanel />
+              <ThemePanelButton className='fixed z-50 right-4 bottom-4 rounded-md p-2' />
+            </ThemeProvider>
+          </ViewProvider>
+        </SidebarProvider>
       </body>
     </html>
   );

@@ -3,21 +3,20 @@ module.exports = {
   content: ['**/*.{ts,tsx}'],
   theme: {
     extend: {
-      textColor: {
+      colors: {
+        darkCyan: '#61f3f3',
+        lightCyan: '#006c9c',
         Default: '#00ab55',
         Cyan: '#078dee',
         Purple: '#7635dc',
         Blue: '#2065d1',
         Orange: '#fda92d',
-        Red: '#f03030'
-      },
-      backgroundColor: {
-        Default: '#00ab55',
-        Cyan: '#078dee',
-        Purple: '#7635dc',
-        Blue: '#2065d1',
-        Orange: '#fda92d',
-        Red: '#f03030'
+        Red: '#f03030',
+        White: '#ffffff',
+        Dark: '#161c24',
+        Light: '#d5d5d56e',
+        HeaderDark: '#161c24cc',
+        HeaderLight: '#ffffffcc'
       },
       backgroundImage: {
         magicalMagnetaText: 'linear-gradient(30deg, #c850c0, #ffcc70)',
@@ -39,7 +38,14 @@ module.exports = {
       },
       boxShadow: {
         sectionShadowDark: '3px 2px 10px 4px #00020563',
-        sectionShadowLight: '3px 2px 10px 4px #c4cbd463'
+        sectionShadowLight: '3px 2px 10px 4px #c4cbd463',
+        themePanelDark: '-40px 40px 80px -8px #0000003d',
+        sidebarDark: '20px 20px 80px 9px #0000003d',
+        headerLight: '0px 0px 20px 11px #00000038',
+        headerDark: '0px 0px 14px 7px #00000069'
+      },
+      zIndex: {
+        60: '60'
       }
     }
   },

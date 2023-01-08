@@ -1,0 +1,8 @@
+# deps
+node_modules
+
+# production builds
+build
+
+# env file
+.env

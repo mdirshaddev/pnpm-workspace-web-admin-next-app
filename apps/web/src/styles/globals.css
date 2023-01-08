@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .clip {
+    transition: all 1s ease-in-out;
+  }
+
+  .clip-circle-small {
+    clip-path: circle(100px at 135% -15%);
+    /* transition: all 1s ease-in-out; */
+  }
+
+  .clip-circle-enlarge {
+    clip-path: circle(1500px at 135% -15%);
+    @apply backdrop-blur-sm;
+    /* transition: all 1s ease-in-out; */
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+/* Theme Palette Color */
+.Default {
+  @apply bg-Default;
+}
+
+.Cyan {
+  @apply bg-Cyan;
+}
+
+.Purple {
+  @apply bg-Purple;
+}
+
+.Blue {
+  @apply bg-Blue;
+}
+
+.Orange {
+  @apply bg-Orange;
+}
+
+.Red {
+  @apply bg-Red;
+}
+
+.White {
+  @apply bg-White;
+}
+
+.Light {
+  @apply bg-Light;
+}
+
+.Dark {
+  @apply bg-Dark;
+}
+
+.HeaderDark {
+  @apply bg-HeaderDark;
+}
+
+.HeaderLight {
+  @apply bg-HeaderLight;
+}
+
+/* Text Color Palette */
+.TextDefault {
+  @apply text-Default;
+}
+
+.TextCyan {
+  @apply text-Cyan;
+}
+
+.TextPurple {
+  @apply text-Purple;
+}
+
+.TextBlue {
+  @apply text-Blue;
+}
+
+.TextOrange {
+  @apply text-Orange;
+}
+
+.TextRed {
+  @apply text-Red;
+}
+
+.TextDark {
+  @apply text-black;
+}
+
+.TextLight {
+  @apply text-white;
+}
+
+.magicalDefault {
+  @apply bg-magicDefault;
+  background-clip: text;
+}
+
+.magicalCyan {
+  @apply bg-magicCyan;
+  background-clip: text;
+}
+
+.magicalPurple {
+  @apply bg-magicPurple;
+  background-clip: text;
+}
+
+.magicalBlue {
+  @apply bg-magicBlue;
+  background-clip: text;
+}
+
+.magicalOrange {
+  @apply bg-magicOrange;
+  background-clip: text;
+}
+
+.magicalRed {
+  @apply bg-magicRed;
+  background-clip: text;
+}
+
+.shadowHeaderDark {
+  @apply shadow-headerDark;
+}
+
+.shadowHeaderLight {
+  @apply shadow-headerLight;
+}

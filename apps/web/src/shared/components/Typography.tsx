@@ -27,7 +27,7 @@ export default function Typography({
     <p
       className={clsx(
         className,
-        `${mode === 'dark' ? 'TextDark' : 'TextLight'}`
+        `${mode === 'dark' ? 'TextLight' : 'TextDark'}`
       )}
       {...props}>
       {children}

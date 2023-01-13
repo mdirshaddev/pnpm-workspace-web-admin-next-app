@@ -11,7 +11,7 @@
     "format": "prettier -w .",
     "format:check": "prettier -c .",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o admin-build-stories"
+    "build-storybook": "build-storybook -o web-build-stories"
   },
   "dependencies": {
     "@mdirshaddev/hooks": "workspace:^1.0.1",
@@ -19,7 +19,11 @@
     "@react-spring/three": "^9.6.1",
     "@react-three/drei": "^9.48.5",
     "@react-three/fiber": "^8.9.2",
+    "@splinetool/loader": "^0.9.183",
+    "@splinetool/r3f-spline": "^1.0.2",
+    "@splinetool/react-spline": "^2.2.5",
     "autoprefixer": "^10.4.13",
+    "canvas-sketch-util": "^1.10.0",
     "clsx": "^1.2.1",
     "date-fns": "^2.29.3",
     "esbuild": "0.12.29",

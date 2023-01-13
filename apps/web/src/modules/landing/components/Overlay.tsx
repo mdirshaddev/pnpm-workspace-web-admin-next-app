@@ -17,7 +17,7 @@ export default function Overlay({ children }: OverlayProps) {
         backgroundImage: `${
           mode === 'dark'
             ? 'linear-gradient(#161c24f0, #161c24f0)'
-            : 'linear-gradient(#e5e5e5, #e7e7e7)'
+            : 'linear-gradient(to top, #dfe9f3 0%, white 100%)'
         }`
       }}
       className='fixed top-0 left-0 w-screen h-screen bg-no-repeat bg-center'>

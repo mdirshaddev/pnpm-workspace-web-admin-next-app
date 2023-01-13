@@ -24,11 +24,6 @@ export default function NavListLinks({}: NavListLinksProps) {
 
   const NavLinks = [
     {
-      href: '/',
-      name: 'Home',
-      key: '#Home'
-    },
-    {
       href: '/dashboard',
       name: 'Dashboard',
       key: '#Dashboard'
@@ -37,6 +32,11 @@ export default function NavListLinks({}: NavListLinksProps) {
       href: '/blogs',
       name: 'Blogs',
       key: '#Blogs'
+    },
+    {
+      href: '/skills',
+      name: 'Skills',
+      key: '#Skills'
     },
     {
       href: '/projects',

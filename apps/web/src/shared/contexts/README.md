@@ -1,3 +1,0 @@
-# Global Contexts
-
-Global Contexts

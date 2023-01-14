@@ -12,13 +12,13 @@ const storybookConfig: StorybookConfig = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    'storybook-addon-swc'
-    // {
-    //   name: 'storybook-addon-next',
-    //   options: {
-    //     nextConfigPath: path.resolve(__dirname, '../next.config.mjs')
-    //   }
-    // }
+    'storybook-addon-swc',
+    {
+      name: 'storybook-addon-next',
+      options: {
+        nextConfigPath: path.resolve(__dirname, './next.config.cjs')
+      }
+    }
   ],
   framework: '@storybook/react',
   core: {
@@ -26,7 +26,7 @@ const storybookConfig: StorybookConfig = {
   },
   features: {
     previewMdx2: true,
-    postcss: true
+    postcss: false
   },
   webpackFinal: async config => {
     config?.resolve?.plugins?.push(new TsConfigWebpackPath());

@@ -17,6 +17,7 @@
     "@emotion/cache": "^11.10.5",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.4",
     "@mui/styles": "^5.11.2",
     "@next/font": "13.1.1",
@@ -66,4 +67,3 @@
     "typescript": "^4.8.4"
   }
 }
-

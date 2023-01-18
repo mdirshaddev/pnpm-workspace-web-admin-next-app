@@ -1,24 +1,20 @@
 'use client';
-import type { PropsWithChildren, ProviderProps } from 'react';
-import type { PaletteMode } from '@mui/material';
+
+import type { MuiThemeProviderProps, ThemeMode } from './typings';
 
 import { useCallback, useMemo, useState } from 'react';
-import { CssBaseline } from '@mui/material';
+import { CssBaseline, PaletteMode, useMediaQuery } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { CacheProvider } from '@emotion/react';
 
-import { DarkTheme } from './dark';
-import { LightTheme } from './light';
-import MuiThemeContext, { MuiThemeProps } from './context';
+import MuiThemeContext, { defaultMode } from './context';
 import createEmotionCache from './emotionCache';
+import CustomTheme from './theme';
 
-interface MuiThemeProviderProps
-  extends Partial<ProviderProps<MuiThemeProps>>,
-    PropsWithChildren {}
-
-export default function MuiThemeProvider(props: MuiThemeProviderProps) {
+const MuiThemeProvider = (props: MuiThemeProviderProps): JSX.Element => {
+  const isDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  const [mode, setMode] = useState<ThemeMode>(defaultMode);
   const emotionCache = createEmotionCache();
-  const [mode, setMode] = useState<PaletteMode>('dark');
 
   const toggleMode = useCallback(() => {
     if (typeof window !== 'undefined') {
@@ -27,9 +23,20 @@ export default function MuiThemeProvider(props: MuiThemeProviderProps) {
     }
   }, [mode]);
 
+  let choosenMode: PaletteMode;
+
   const theme = useMemo(() => {
-    return createTheme(mode === 'light' ? LightTheme : DarkTheme);
-  }, [mode]);
+    if (mode !== 'system') {
+      if (mode === 'dark') choosenMode = 'dark';
+      else choosenMode = 'light';
+    } else {
+      if (isDarkMode === true) choosenMode = 'dark';
+      else choosenMode = 'light';
+    }
+    const selectedTheme = createTheme(CustomTheme(choosenMode));
+    return selectedTheme;
+  }, [mode, isDarkMode]);
+
   return (
     <CacheProvider value={emotionCache}>
       <MuiThemeContext.Provider
@@ -41,4 +48,5 @@ export default function MuiThemeProvider(props: MuiThemeProviderProps) {
       </MuiThemeContext.Provider>
     </CacheProvider>
   );
-}
+};
+export default MuiThemeProvider;

@@ -1,20 +1,13 @@
 'use client';
 
-import type { PaletteMode } from '@mui/material';
+import type { MuiThemeContextProps, ThemeMode } from './typings';
 import { createContext } from 'react';
 
-export interface MuiThemeProps {
-  mode: PaletteMode;
-}
-
-interface MuiThemeContextProps extends MuiThemeProps {
-  toggleMode: (mode: PaletteMode) => void;
-  resetSettings: () => void;
-}
+export const defaultMode: ThemeMode = 'system';
 
 const MuiThemeContext = createContext<MuiThemeContextProps>({
-  mode: 'dark',
-  toggleMode: (mode: PaletteMode) => {},
+  mode: defaultMode,
+  toggleMode: () => {},
   resetSettings: () => {}
 });
 

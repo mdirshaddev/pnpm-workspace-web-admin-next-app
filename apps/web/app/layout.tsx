@@ -4,9 +4,6 @@ import 'src/styles/globals.css';
 // Google Font
 import { Inter } from '@next/font/google';
 
-// Theme
-import { MuiThemeProvider } from 'src/themes';
-
 // Next Font - Inter
 const inter = Inter({ subsets: ['latin'] });
 
@@ -30,9 +27,7 @@ export default async function RootLayout({
         />
         <link rel='icon' href='/logo.svg' />
       </head>
-      <body>
-        <MuiThemeProvider>{children}</MuiThemeProvider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
